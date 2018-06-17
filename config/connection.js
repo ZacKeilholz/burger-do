@@ -1,22 +1,24 @@
-// Set up MySQL connection.
+//Set up MySQL Connection
+require('dotenv').config();
 var mysql = require("mysql");
 
-var connection = mysql.createConnection({
-  host: "localhost",
-  port: 3306,
-  user: "root",
-  password: "!@#zlohIE",
-  database: "cat_db"
+var keys = require("./keys");
+var fs = require("fs");
+
+var connectionBurger = mysql.createConnection({
+    host:"localhost",
+    port:3306,
+    user: keys.mySQL.user,
+    password: keys.mySQL.password,
+    database: "burger_db"
 });
 
-// Make connection.
-connection.connect(function(err) {
-  if (err) {
-    console.error("error connecting: " + err.stack);
-    return;
-  }
-  console.log("connected as id " + connection.threadId);
+connectionBurger.connect(function(err) {
+    if (err) {
+        console.log("Error Connecting: " + err.stack);
+        return;
+    };
+    console.log("Connected to DB as id ",connectionBurger.threadId);
 });
 
-// Export connection for our ORM to use.
-module.exports = connection;
+module.exports = connectionBurger;

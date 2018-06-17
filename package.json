@@ -2,7 +2,7 @@
   "name": "burger-do",
   "version": "1.0.0",
   "description": "A burger-based to-eat webapp",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,8 +18,10 @@
   "homepage": "https://github.com/ZacKeilholz/burger-do#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
+    "fs": "0.0.1-security",
     "mysql": "^2.15.0"
   }
 }
