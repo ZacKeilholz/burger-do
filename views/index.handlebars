@@ -1,38 +1,63 @@
-<h1>Burgers!</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-lg">
 
-<h2>Burgers that are not Eaten!</h2>
+      <br>
+      <div class="card text-center">
 
-<ul>
-  {{#each burgers}}
-    {{#unless eaten}}
-      {{> burgers/burger-block eaten=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+        <div class="card-body">
+          <h5 class="card-title">Burger Todo Manager</h5>
+          <p class="card-text">Add a burger!</p>
+          {{!--
+          <a href="#" class="btn btn-primary">Go somewhere</a> --}}
+        </div>
 
-<h2>Burgers that are eaten!</h2>
+      </div>
 
-<ul>
-  {{#each burgers}}
-    {{#if eaten}}
-      {{> burgers/burger-block eaten=false}}
-    {{/if}}
-  {{/each}}
-</ul>
 
-<h2>Add a Burger</h2>
-<form class="create-form">
+      <h2>Burgers that are not Eaten!</h2>
 
-  <div class="form-group">
-    <label for="burger">Burger Name:</label>
-    <input type="text" id="burger" name="name">
+      <ul>
+        {{#each burgers}} {{#unless eaten}} {{> burgers/burger-block eaten=true}} {{/unless}} {{/each}}
+      </ul>
+
+      <h2>Burgers that are eaten!</h2>
+
+      <ul>
+        {{#each burgers}} {{#if eaten}} {{> burgers/burger-block eaten=false}} {{/if}} {{/each}}
+      </ul>
+
+
+      <div class="card text-center">
+
+        <div class="card-body">
+          <h5 class="card-title">Add a Burger</h5>
+
+          <p class="card-text">Add a burger!</p>
+          <form class="create-form">
+
+            <div class="form-group">
+              <label for="burger">Burger Name:</label>
+              <input type="text" id="burger" name="name">
+            </div>
+
+            <div class="form-group">
+              <label for="eaten">Sleepy?</label>
+              <br>
+              <input type="radio" name="eaten" value="1" checked> Eaten!
+              <br>
+              <input type="radio" name="eaten" value="0"> Not Eaten!
+            </div>
+
+            <button type="submit">Add Burger</button>
+          </form>
+
+        </div>
+
+      </div>
+
+
+
+    </div>
   </div>
-
-  <div class="form-group">
-    <label for="eaten">Sleepy?</label><br>
-    <input type="radio" name="eaten" value="1" checked> Eaten!<br>
-    <input type="radio" name="eaten" value="0"> Not Eaten!
-  </div>
-
-  <button type="submit">Add Burger</button>
-</form>
+</div>
