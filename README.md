@@ -2,9 +2,7 @@
 # **Burger-Do** - Track the burgers you want to eat!
 
 ## Video Link of Burger-Do in Action: [Burger-Do]
-(
-
-)
+(https://drive.google.com/file/d/1Sw7Ned04-6drhYox3G2AzI1mYkGYAIwF/view)
 
 ## About:
 
@@ -16,4 +14,5 @@ To use Burger-Do, clone the app, download all of the necessary NPM modules, and 
 
 To Do:
 
-1.  Get App Uploaded to Heroku
+1.  Get App Deployed to Heroku
+2.  Clean up Front End/Add Style
